@@ -24,3 +24,4 @@ Trying out simple backend/frontend project template
 * look into component testing with react, or puppeteer
 * add eslint/prettier/test to commit lint
 * add typechecker helper in esbuild-helper package
+* add docker file for making named build
