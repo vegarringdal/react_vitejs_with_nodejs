@@ -3,3 +3,4 @@
 
 # activate when ready
 #npm test
+#npm run eslint
