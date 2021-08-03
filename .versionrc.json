@@ -17,6 +17,18 @@
         {
             "filename": "package-lock.json",
             "type": "json"
+        },
+        {
+            "filename": "./common/package.json",
+            "type": "json"
+        },
+        {
+            "filename": "./frontend/package.json",
+            "type": "json"
+        },
+        {
+            "filename": "./backend/package.json",
+            "type": "json"
         }
     ],
     "commitUrlFormat": "https://github.com/vegarringdal/react_vitejs_with_nodejs/commits/{{hash}}",

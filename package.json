@@ -22,7 +22,8 @@
         "prettier": "prettier --write  \"./**/*.ts\" && prettier --write  \"./**/*.json\" && prettier --write  \"./**/*.tsx\"",
         "prepare": "husky install",
         "release:test": "standard-version --dry-run",
-        "release": "standard-version --release-as minor"
+        "release": "standard-version --release-as minor",
+        "release:major": "standard-version --release-as major"
     },
     "keywords": [],
     "author": "",
