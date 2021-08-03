@@ -19,7 +19,7 @@
         "test:backend": "npm run test -w backend",
         "test:frontend": "npm run test -w frontend",
         "test:common": "npm run test -w common",
-        "prettier": "prettier --write  \"./**/*.ts\" && prettier --write  \"./**/*.json\"",
+        "prettier": "prettier --write  \"./**/*.ts\" && prettier --write  \"./**/*.json\" && prettier --write  \"./**/*.tsx\"",
         "prepare": "husky install",
         "release:test": "standard-version --dry-run",
         "release": "standard-version --release-as minor"
