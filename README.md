@@ -12,5 +12,4 @@ Trying out npm workspaces in hope it might help a little..
 
 
 Todo:
-* version js
 * eslint
