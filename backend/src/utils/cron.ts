@@ -1,7 +1,7 @@
 import { log } from "console";
+import * as cron from "node-cron";
 
 export function initCron() {
-    const cron = require("node-cron");
     cron.schedule(
         "* * * * * *",
         () => {
@@ -9,7 +9,7 @@ export function initCron() {
         },
         {
             scheduled: true,
-            timezone: "Europe/Oslo"
+            timezone: "Europe/Berlin"
         }
     );
 }

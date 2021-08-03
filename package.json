@@ -6,8 +6,9 @@
     "scripts": {
         "start": "concurrently \"npm run start -w backend\" \"npm run start -w frontend\"",
         "build": "npm run build -w backend && npm run build -w frontend",
+        "eslint": "npm run eslint -w backend && npm run eslint -w frontend && npm run eslint -w common",
         "serve": "node ./backend/dist/index",
-        "test": "echo \"Error: no test specified\" && exit 1",
+        "test": "npm run test -w backend && npm run test -w frontend && npm run test -w common",
         "prettier": "prettier --write  \"./**/*.ts\" && prettier --write  \"./**/*.json\"",
         "prepare": "husky install",
         "release:test": "standard-version  --dry-run",

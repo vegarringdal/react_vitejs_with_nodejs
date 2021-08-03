@@ -1,7 +1,7 @@
 import { initDatabase } from "./database/index";
 import { initHttpConfig, startHttpServer } from "./initDefaultHttp";
 import { initRestApi } from "./restApi/main";
-import { initCron } from "./utils/cron";
+// import { initCron } from "./utils/cron";
 import { commonCodeString } from "../../common/src/exports";
 console.log(commonCodeString);
 
