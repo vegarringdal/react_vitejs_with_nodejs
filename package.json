@@ -1,0 +1,30 @@
+{
+  "name": "workspace",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"npm run start -w backend\" \"npm run start -w frontend\"",
+    "build": "npm run build -w backend && npm run build -w frontend",
+    "serve": "node ./backend/dist/index",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prettier": "prettier --write  \"./**/*.ts\"",
+    "prepare": "husky install"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "workspaces": [
+    "backend",
+    "common",
+    "frontend"
+  ],
+  "dependencies": {
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
+    "concurrently": "^6.2.0",
+    "husky": "^7.0.1",
+    "lint-staged": "^11.1.1",
+    "prettier": "^2.3.2"
+  }
+}

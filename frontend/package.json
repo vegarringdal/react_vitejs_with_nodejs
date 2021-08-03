@@ -1,0 +1,37 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@simple-html/datasource": "3.7.0-next.1",
+    "@simple-html/grid": "3.7.0-next.1",
+    "@types/jest": "^26.0.24",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@vitejs/plugin-react-refresh": "^1.3.1",
+    "autoprefixer": "^10.3.1",
+    "common": "^1.0.0",
+    "concurrently": "^6.2.0",
+    "esbuild": "^0.12.15",
+    "postcss": "^8.3.6",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
+    "tailwindcss": "^2.2.7",
+    "typescript": "^4.3.5",
+    "vite": "^2.4.4",
+    "zustand": "^3.5.7"
+  },
+  "dependencies": {
+    "jest": "^27.0.6",
+    "ts-jest": "^27.0.4"
+  }
+}

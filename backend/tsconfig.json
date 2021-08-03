@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "isolatedModules": false,
+  },
+
+  "exclude": ["node_modules", "dist", "**/__tests__"]
+}
