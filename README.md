@@ -11,9 +11,16 @@ Trying out simple backend/frontend project template
 -   `npm install` to install all dependencies
 -   `npm start` to start dev mode (edits to front/back and common triggers rebuild)
 
-If you need to override this during development then you need to add '.env' to backend folder
+If you like to run backend and frontend in own terminals and not with concurrently you can use
+these:
+
+-   `start:frontend`
+-   `start:backend`
+
+If you need to override this during development then you need to add '.env' root
 
 ```env
+# for backend
 SERVER_PORT         # default: 80;
 SESSION_MAX_AGE     # default: 864000000;
 HOST                # default: localhost;
@@ -21,6 +28,10 @@ SESSION_DOMAIN      # default: localhost;
 SESSION_PRIVATE_KEY # default: my_key;
 SESSION_NAME        # default: session_name;
 API_ROOT_PATH       # default: /api;
+
+# for development only
+PORT_API:           # default : 81
+PORT_WEB:           # default : 80
 ```
 
 ## make builds & run
@@ -40,4 +51,4 @@ API_ROOT_PATH       # default: /api;
 -   add eslint/prettier/test to commit lint
 -   add typechecker helper in esbuild-helper package
 -   add docker file for making named build
--   improve env file part, and add more options live dev ports
+-   add github action for test and typechecking

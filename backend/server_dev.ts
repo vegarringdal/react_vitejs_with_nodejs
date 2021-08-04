@@ -1,7 +1,8 @@
 import { clearFolders, nodejs, makeAllPackagesExternalPlugin } from "esbuild-helpers";
+import { config } from "dotenv";
 
 // add env files - only used in development-
-require("dotenv").config();
+config({ path: "../.env" });
 
 // clear dist
 clearFolders("dist");

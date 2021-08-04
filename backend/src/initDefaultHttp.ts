@@ -12,7 +12,9 @@ import {
     SESSION_NAME,
     SESSION_DOMAIN,
     SESSION_MAX_AGE,
-    IS_DEVELOPMENT
+    IS_DEVELOPMENT,
+    PORT_WEB,
+    PORT_API
 } from "./config";
 
 export const app = express();
@@ -76,7 +78,8 @@ export function startHttpServer() {
     if (IS_DEVELOPMENT) {
         app.listen(3001, HOST);
         console.log(`--------------------------------------------------------------\n`);
-        console.log(` ---> Backend only, vite is serving frontend`);
+        console.log(` ---> Vitejs on http://localhost:${PORT_WEB}`);
+        console.log(` ---> Backend using port: ${PORT_API} for API (vitejs proxy fixing this)`);
         console.log(` ---> Running in mode: ${IS_DEVELOPMENT ? "Development" : "Production"}`);
         console.log(`\n--------------------------------------------------------------\n`);
     } else {
