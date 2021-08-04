@@ -2,5 +2,5 @@
 . "$(dirname "$0")/_/husky.sh"
 
 # activate when ready
-npm run prettier
-npm run eslint
+# npm run prettier
+# npm run eslint
