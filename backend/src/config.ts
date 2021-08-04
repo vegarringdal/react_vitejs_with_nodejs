@@ -42,8 +42,8 @@ export const IS_DEVELOPMENT = DEVELOPMENT; // esbuild gives us this one
  **/
 
 // http server, server port is only used when in production
-export const SERVER_PORT = number(process.env.SERVER_PORT) || 80;
-export const SERVER_HOST = process.env.SERVER_HOST || "localhost";
+export const SERVER_PORT = number(process.env.SERVER_PORT) || 1080;
+export const SERVER_HOST = process.env.SERVER_HOST || "0.0.0.0";
 export const SERVER_COMPRESSION = boolean(process.env.SERVER_COMPRESSION) || true;
 export const SERVER_API_ROOT = process.env.SERVER_API_ROOT || "/api"; // also used by vitejs proxy, important if you edit default
 
@@ -56,5 +56,5 @@ export const SESSION_HTTP_ONLY = boolean(process.env.SESSION_HTTP_ONLY) || true;
 export const SESSION_SAME_SITE = boolean(process.env.SESSION_SAME_SITE) || true;
 
 // for develpment only
-export const PORT_API = number(process.env.PORT_API) | 81; // also used by vitejs proxy, important if you edit default
-export const PORT_WEB = number(process.env.PORT_WEB) | 80; // also used by vitejs proxy, important if you edit default
+export const PORT_API = number(process.env.PORT_API) | 1081; // also used by vitejs proxy, important if you edit default
+export const PORT_WEB = number(process.env.PORT_WEB) | 1080; // also used by vitejs proxy, important if you edit default

@@ -24,14 +24,14 @@ If you need to override this during development then you need to add '.env' root
 # BACKEND
 
 # http server
-SERVER_PORT         # default: 80;
-SERVER_HOST         # default: localhost;
+SERVER_PORT         # default: 1080;
+SERVER_HOST         # default: 0.0.0.0;
 SERVER_COMPRESSION  # default: true
 SERVER_API_ROOT     # default: /api - vitejs also uses this for proxy settings
 
 # express session
 SESSION_MAX_AGE     # default: 864000000;
-SESSION_DOMAIN      # default: localhost;
+SESSION_DOMAIN      # default: 0.0.0.0;
 SESSION_PRIVATE_KEY # default: change_me;
 SESSION_NAME        # default: session_name;
 SESSION_HTTP_ONLY   # default: true;
@@ -39,8 +39,8 @@ SESSION_SAME_SITE   # default: true;
        
 
 # DEVELOPMENT ONLY
-PORT_API:           # default : 81 Will be used by backend when it just a api server and vitejs
-PORT_WEB:           # default : 80 Will be used by vitejs dev server
+PORT_API:           # default : 1081 Will be used by backend when it just a api server and vitejs
+PORT_WEB:           # default : 1080 Will be used by vitejs dev server
 ```
 
 ## Make builds & run

@@ -19,8 +19,8 @@ function number(x: string): number {
     }
 }
 
-const PORT_API = number(process.env.PORT_API) | 81;
-const PORT_WEB = number(process.env.PORT_WEB) | 80;
+const PORT_API = number(process.env.PORT_API) | 1081;
+const PORT_WEB = number(process.env.PORT_WEB) | 1080;
 const SERVER_API_ROOT = process.env.SERVER_API_ROOT || "/api";
 
 // https://vitejs.dev/config/
