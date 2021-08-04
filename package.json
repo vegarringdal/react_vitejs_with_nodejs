@@ -32,7 +32,11 @@
         "release": "standard-version --release-as minor",
         "release:test": "standard-version --dry-run",
         "release:major": "standard-version --release-as major",
-        "prepare": "husky install"
+        "prepare": "husky install",
+        "ci": "run-s -s -n ci:*",
+        "ci:test": "npm run test",
+        "ci:eslint": "npm run eslint",
+        "ci:typecheck": "npm run typecheck"
     },
     "keywords": [],
     "author": "vegar.ringdal@gmail.com",
