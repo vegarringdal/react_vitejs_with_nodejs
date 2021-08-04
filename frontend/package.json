@@ -13,31 +13,27 @@
     "author": "",
     "license": "ISC",
     "devDependencies": {
-        "@simple-html/datasource": "3.7.0-next.1",
-        "@simple-html/grid": "3.7.0-next.1",
         "@types/jest": "^26.0.24",
-        "@types/react": "^17.0.0",
-        "@types/react-dom": "^17.0.0",
-        "@vitejs/plugin-react-refresh": "^1.3.1",
-        "@typescript-eslint/eslint-plugin": "^4.28.4",
-        "@typescript-eslint/parser": "^4.28.4",
-        "eslint": "^7.31.0",
+        "@types/react": "^17.0.15",
+        "@types/react-dom": "^17.0.9",
+        "@vitejs/plugin-react-refresh": "^1.3.6",
+        "@typescript-eslint/eslint-plugin": "^4.29.0",
+        "@typescript-eslint/parser": "^4.29.0",
+        "eslint": "^7.32.0",
         "eslint-config-prettier": "^8.3.0",
         "eslint-plugin-prettier": "^3.4.0",
         "autoprefixer": "^10.3.1",
-        "common": "^1.0.0",
         "concurrently": "^6.2.0",
-        "esbuild": "^0.12.15",
+        "esbuild": "^0.12.17",
         "postcss": "^8.3.6",
-        "react": "^17.0.0",
-        "react-dom": "^17.0.0",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2",
         "tailwindcss": "^2.2.7",
         "typescript": "^4.3.5",
         "vite": "^2.4.4",
-        "zustand": "^3.5.7"
-    },
-    "dependencies": {
+        "zustand": "^3.5.7",
         "jest": "^27.0.6",
         "ts-jest": "^27.0.4"
-    }
+    },
+    "dependencies": {}
 }
