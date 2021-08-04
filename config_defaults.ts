@@ -1,6 +1,7 @@
 /**
  * This is the default settings,you should overide some of these with .env file
  * Important to override SESSION_PRIVATE_KEY
+ * Never add passwords to this file
  */
 
 // web nodejs server
