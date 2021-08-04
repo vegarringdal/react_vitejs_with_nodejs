@@ -1,8 +1,10 @@
 import { initHttpConfig, startHttpServer } from "./initDefaultHttp";
 
-// if you need code from common code then use complete path on backend
-import { commonCodeString } from "../../common/src/exports";
-console.log(commonCodeString);
+/**
+ * if you need code from common code then use complete path on backend
+ * import { commonCodeString } from "../../common/src/exports";
+ * console.log(commonCodeString);
+ */
 
 // start application
 initHttpConfig();

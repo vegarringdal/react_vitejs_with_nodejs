@@ -9,13 +9,14 @@ Trying out simple backend/frontend project template
 ### Development & run
 
 -   `npm install` to install all dependencies
--   `npm start` to start dev mode (edits to front/back and common triggers rebuild)
+-   `npm start` to start dev mode (edits to front/back and common triggers rebuild, also rundt typechecker in watch mode)
 
 If you like to run backend and frontend in own terminals and not with concurrently you can use
 these:
 
 -   `start:frontend`
 -   `start:backend`
+-   `start:typechecker`
 
 If you need to override this during development then you need to add '.env' root
 
@@ -55,6 +56,8 @@ Serve starts build on backend (dist folder, index.js), and uses frontend dist fo
 -   `npm run eslint` to run eslint on all (without --fix)
 -   `npm run eslint:fix` to run eslint on all (with --fix)
 -   `npm run test` to run jest on all
+-   `npm run typecheck` to run typescript check (throws on error)
+-   `npm run typecheck:watch` to run typescript check in watch mode
 
 
 ## commit linting/checks
@@ -64,7 +67,5 @@ Serve starts build on backend (dist folder, index.js), and uses frontend dist fo
 ### todo
 
 -   look into component testing with react, or puppeteer
--   add eslint/prettier/test to commit lint
--   add typechecker helper in esbuild-helper package
 -   add docker file for making named build
 -   add github action for test and typechecking

@@ -3,3 +3,4 @@
 
 # does not automatically fix
 npm run eslint
+npm run typecheck

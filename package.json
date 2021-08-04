@@ -7,6 +7,7 @@
         "start": "run-p -s -l start:*",
         "start:backend": "npm run start -w backend",
         "start:frontend": "npm run start -w frontend",
+        "start:typechecker": "npm run typecheck:watch",
         "build": "run-s -s -n build:*",
         "build:backend": "npm run build -w backend",
         "build:frontend": "npm run build -w frontend",
@@ -27,6 +28,8 @@
         "prettier:json": "prettier --write  \"./**/*.json\"",
         "prettier:ts": "prettier --write  \"./**/*.ts\"",
         "prettier:tsx": "prettier --write  \"./**/*.tsx\"",
+        "typecheck":"ts-node ./typecheck.ts",
+        "typecheck:watch":"ts-node ./typecheck_watch.ts",
         "release": "standard-version --release-as minor",
         "release:test": "standard-version --dry-run",
         "release:major": "standard-version --release-as major",
@@ -47,6 +50,7 @@
         "lint-staged": "^11.1.1",
         "npm-run-all": "^4.1.5",
         "prettier": "^2.3.2",
-        "standard-version": "^9.3.1"
+        "standard-version": "^9.3.1",
+        "ts-node": "^10.1.0"
     }
 }
