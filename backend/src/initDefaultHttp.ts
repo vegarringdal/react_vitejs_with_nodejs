@@ -17,7 +17,8 @@ import {
     SESSION_HTTP_ONLY,
     SESSION_SAME_SITE,
     SERVER_HOST,
-    SERVER_COMPRESSION
+    SERVER_COMPRESSION,
+    SESSION_SECURE
 } from "./config";
 
 export const app = express();
@@ -50,7 +51,7 @@ export function initHttpConfig() {
                 sameSite: SESSION_SAME_SITE,
                 maxAge: SESSION_MAX_AGE,
                 domain: SESSION_DOMAIN,
-                secure: !IS_DEVELOPMENT // only used for production/https
+                secure: SESSION_SECURE // only used for production/https
             }
         })
     );

@@ -72,7 +72,19 @@ Serve starts build on backend (dist folder, index.js), and uses frontend dist fo
 -   add correct url to .versionrc.json
 -   update lisense and author
 
+
+## Docker
+Ive added default docker file to help build.
+You need to replace tag and name.
+
+* Build to build:
+  * `docker build . -t awsome/webapp`  
+* Run sample 
+  * `docker run --name myAppv01 --env-file .env -p 81:1080 -d awsome/webapp`
+* Check its running: 
+  * `docker logs myAppv01`
+
 ### todo
 
 -   look into component testing with react, or puppeteer
--   add github action for test and typechecking
+-   add github action for test, eslint check & typechecking
