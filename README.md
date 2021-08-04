@@ -9,7 +9,8 @@ Trying out simple backend/frontend project template
 ### Development & run
 
 -   `npm install` to install all dependencies
--   `npm start` to start dev mode (edits to front/back and common triggers rebuild, also rundt typechecker in watch mode)
+-   `npm start` to start dev mode (edits to front/back and common triggers rebuild, also rundt
+    typechecker in watch mode)
 
 If you like to run backend and frontend in own terminals and not with concurrently you can use
 these:
@@ -20,27 +21,29 @@ these:
 
 If you need to override this during development then you need to add '.env' root
 
+See `config_default.ts` at root if you need to edit these
+
 ```env
 # BACKEND
 
 # http server
-SERVER_PORT         # default: 1080;
-SERVER_HOST         # default: 0.0.0.0;
+SERVER_PORT         # default: 1080 - uses 1081 in dev mode, since its only API server
+SERVER_HOST         # default: 0.0.0.0
 SERVER_COMPRESSION  # default: true
 SERVER_API_ROOT     # default: /api - vitejs also uses this for proxy settings
 
 # express session
-SESSION_MAX_AGE     # default: 864000000;
-SESSION_DOMAIN      # default: 0.0.0.0;
-SESSION_PRIVATE_KEY # default: change_me;
-SESSION_NAME        # default: session_name;
-SESSION_HTTP_ONLY   # default: true;
-SESSION_SAME_SITE   # default: true;
-       
+SESSION_MAX_AGE     # default: 864000000
+SESSION_DOMAIN      # default: 0.0.0.0
+SESSION_PRIVATE_KEY # default: change_me
+SESSION_NAME        # default: session_name
+SESSION_HTTP_ONLY   # default: true
+SESSION_SAME_SITE   # default: true
+
 
 # DEVELOPMENT ONLY
-PORT_API:           # default : 1081 Will be used by backend when it just a api server and vitejs
-PORT_WEB:           # default : 1080 Will be used by vitejs dev server
+PORT_API:           # default : 1081 - Will be used by backend when it just a api server and vitejs
+PORT_WEB:           # default : 1080 - Will be used by vitejs dev server
 ```
 
 ## Make builds & run
@@ -59,10 +62,10 @@ Serve starts build on backend (dist folder, index.js), and uses frontend dist fo
 -   `npm run typecheck` to run typescript check (throws on error)
 -   `npm run typecheck:watch` to run typescript check in watch mode
 
-
 ## commit linting/checks
-* uses lint-stage on commit messages, fix: feat: show in change log
-* runs eslint on pre-commit
+
+-   uses lint-stage on commit messages, fix: feat: show in change log
+-   runs eslint on pre-commit
 
 ### todo
 

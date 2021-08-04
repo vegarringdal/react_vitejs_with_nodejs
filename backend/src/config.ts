@@ -1,36 +1,31 @@
+/**
+ * IMPORTANT
+ * User config_defaults.ts at root if you need to edit anything
+ * You only need to edit this file if you rename these folders src, dist, backend, frontend
+ */
+
 import * as path from "path";
+import {
+    toBool,
+    DEFAULT_PORT_API,
+    DEFAULT_PORT_WEB,
+    DEFAULT_SERVER_API_ROOT,
+    DEFAULT_SERVER_COMPRESSION,
+    DEFAULT_SERVER_HOST,
+    DEFAULT_SERVER_PORT,
+    DEFAULT_SESSION_DOMAIN,
+    DEFAULT_SESSION_HTTP_ONLY,
+    DEFAULT_SESSION_MAX_AGE,
+    DEFAULT_SESSION_NAME,
+    DEFAULT_SESSION_PRIVATE_KEY,
+    DEFAULT_SESSION_SAME_SITE,
+    toNumber
+} from "../../config_defaults";
 
 // global variable set by esbuild
 declare const DEVELOPMENT: boolean;
 
-/**
- * Helper for returning number or 0
- * @param x any
- * @returns number
- */
-function number(x: string | null | undefined): number {
-    const number = parseInt(x);
-    if (isNaN(number)) {
-        return 0;
-    } else {
-        return number;
-    }
-}
-
-/**
- * Helper for returning number or 0
- * @param x any
- * @returns number
- */
-function boolean(x: string | null | undefined): boolean {
-    if (typeof x !== "string") {
-        return false;
-    }
-    if (x.toLowerCase() === "true") {
-        return true;
-    }
-    return false;
-}
+const ENV = process.env;
 
 // if you change this you also need to edit config for vitejs
 export const WEB_ROOT = path.join(__dirname, "../../frontend", "dist");
@@ -42,19 +37,19 @@ export const IS_DEVELOPMENT = DEVELOPMENT; // esbuild gives us this one
  **/
 
 // http server, server port is only used when in production
-export const SERVER_PORT = number(process.env.SERVER_PORT) || 1080;
-export const SERVER_HOST = process.env.SERVER_HOST || "0.0.0.0";
-export const SERVER_COMPRESSION = boolean(process.env.SERVER_COMPRESSION) || true;
-export const SERVER_API_ROOT = process.env.SERVER_API_ROOT || "/api"; // also used by vitejs proxy, important if you edit default
+export const SERVER_PORT = toNumber(ENV.SERVER_PORT) || DEFAULT_SERVER_PORT;
+export const SERVER_HOST = ENV.SERVER_HOST || DEFAULT_SERVER_HOST;
+export const SERVER_COMPRESSION = toBool(ENV.SERVER_COMPRESSION) || DEFAULT_SERVER_COMPRESSION;
+export const SERVER_API_ROOT = ENV.SERVER_API_ROOT || DEFAULT_SERVER_API_ROOT;
 
 // for express session
-export const SESSION_MAX_AGE = number(process.env.SESSION_MAX_AGE) | (3600 * 60 * 60 * 24 * 14); //1 sec * 60sec * 60min * 24hours * 14 days
-export const SESSION_DOMAIN = process.env.SESSION_DOMAIN || SERVER_HOST;
-export const SESSION_PRIVATE_KEY = process.env.SESSION_PRIVATE_KEY || "change_me";
-export const SESSION_NAME = process.env.SESSION_NAME || "session_name";
-export const SESSION_HTTP_ONLY = boolean(process.env.SESSION_HTTP_ONLY) || true;
-export const SESSION_SAME_SITE = boolean(process.env.SESSION_SAME_SITE) || true;
+export const SESSION_MAX_AGE = toNumber(ENV.SESSION_MAX_AGE) || DEFAULT_SESSION_MAX_AGE;
+export const SESSION_DOMAIN = ENV.SESSION_DOMAIN || DEFAULT_SESSION_DOMAIN;
+export const SESSION_PRIVATE_KEY = ENV.SESSION_PRIVATE_KEY || DEFAULT_SESSION_PRIVATE_KEY;
+export const SESSION_NAME = ENV.SESSION_NAME || DEFAULT_SESSION_NAME;
+export const SESSION_HTTP_ONLY = toBool(ENV.SESSION_HTTP_ONLY) || DEFAULT_SESSION_HTTP_ONLY;
+export const SESSION_SAME_SITE = toBool(ENV.SESSION_SAME_SITE) || DEFAULT_SESSION_SAME_SITE;
 
 // for develpment only
-export const PORT_API = number(process.env.PORT_API) | 1081; // also used by vitejs proxy, important if you edit default
-export const PORT_WEB = number(process.env.PORT_WEB) | 1080; // also used by vitejs proxy, important if you edit default
+export const PORT_API = toNumber(ENV.PORT_API) || DEFAULT_PORT_API;
+export const PORT_WEB = toNumber(ENV.PORT_WEB) || DEFAULT_PORT_WEB;
