@@ -1,8 +1,7 @@
 {
-    "name": "workspace",
+    "name": "workspace-template",
     "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
+    "description": "Template for react typescript with nodejs backend and vitjs for frontend",
     "scripts": {
         "start": "run-p -s -l start:*",
         "start:backend": "npm run start -w backend",
@@ -36,8 +35,8 @@
         "prepare": "husky install"
     },
     "keywords": [],
-    "author": "",
-    "license": "ISC",
+    "author": "vegar.ringdal@gmail.com",
+    "license": "MIT",
     "workspaces": [
         "backend",
         "common",

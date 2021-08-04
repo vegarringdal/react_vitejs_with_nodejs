@@ -3,25 +3,23 @@
 Trying out simple backend/frontend project template
 
 -   Trying out npm workspaces in hope it might help a little..
--   using vitejs for very fast bundling for frontend
--   using homemade script/package with esbuild for backend
+-   Using vitejs for very fast bundling for frontend
+-   Using homemade script/package with esbuild for backend and pretty typechecking
 
 ### Development & run
 
 -   `npm install` to install all dependencies
--   `npm start` to start dev mode (edits to front/back and common triggers rebuild, also rundt
-    typechecker in watch mode)
+-   `npm start` to start dev mode (edit in front/back and common triggers rebuild, also re-run
+    typechecker)
 
-If you like to run backend and frontend in own terminals and not with concurrently you can use
-these:
+If you like to run backend, frontend & typechecking in own terminals you can use these:
 
 -   `start:frontend`
 -   `start:backend`
 -   `start:typechecker`
 
-If you need to override this during development then you need to add '.env' root
-
-See `config_default.ts` at root if you need to edit these
+If you need to override this during development then you need to add '.env' to root See
+`config_default.ts` at root if you need to edit these
 
 ```env
 # BACKEND
@@ -39,6 +37,7 @@ SESSION_PRIVATE_KEY # default: change_me
 SESSION_NAME        # default: session_name
 SESSION_HTTP_ONLY   # default: true
 SESSION_SAME_SITE   # default: true
+SESSION_SECURE      # default is set by esbuild - default true if not development
 
 
 # DEVELOPMENT ONLY
@@ -67,8 +66,13 @@ Serve starts build on backend (dist folder, index.js), and uses frontend dist fo
 -   uses lint-stage on commit messages, fix: feat: show in change log
 -   runs eslint on pre-commit
 
+## First time usage:
+
+-   you should edit the package.json name & description
+-   add correct url to .versionrc.json
+-   update lisense and author
+
 ### todo
 
 -   look into component testing with react, or puppeteer
--   add docker file for making named build
 -   add github action for test and typechecking

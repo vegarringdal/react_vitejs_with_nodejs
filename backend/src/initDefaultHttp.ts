@@ -85,7 +85,7 @@ export function startHttpServer() {
         app.listen(PORT_API, SERVER_HOST);
         console.log(`--------------------------------------------------------------\n`);
         console.log(` ---> Vitejs on http://localhost:${PORT_WEB}`);
-        console.log(` ---> Backend using port: ${PORT_API} for API (vitejs proxy fixing this)`);
+        console.log(` ---> Backend using port: ${PORT_API} for API (vitejs proxy use this)`);
         console.log(` ---> Running in mode: ${IS_DEVELOPMENT ? "Development" : "Production"}`);
         console.log(`\n--------------------------------------------------------------\n`);
     } else {
