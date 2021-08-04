@@ -1,4 +1,4 @@
-# react template
+# react & vitejs template for nodejs backend
 
 Trying out simple backend/frontend project template
 
@@ -6,7 +6,7 @@ Trying out simple backend/frontend project template
 -   using vitejs for very fast bundling for frontend
 -   using homemade script/package with esbuild for backend
 
-### development & run
+### Development & run
 
 -   `npm install` to install all dependencies
 -   `npm start` to start dev mode (edits to front/back and common triggers rebuild)
@@ -38,25 +38,26 @@ SESSION_SAME_SITE   # default: true;
        
 
 # DEVELOPMENT ONLY
-PORT_API:           # default : 81 Will be used by backend when it just a api server and vitejs is serving pages
+PORT_API:           # default : 81 Will be used by backend when it just a api server and vitejs
 PORT_WEB:           # default : 80 Will be used by vitejs dev server
 ```
 
-## make builds & run
+## Make builds & run
 
 -   `npm run build` to build production
 -   `npm run serve` to run production
 
 Serve starts build on backend (dist folder, index.js), and uses frontend dist folder to serve www.
 
-## testing
+## Testing
 
 -   `npm run prettier` to run prettier on all ts and json files
--   `npm run eslint` to run eslint on all
+-   `npm run eslint` to run eslint on all (without --fix)
+-   `npm run eslint:fix` to run eslint on all (with --fix)
 -   `npm run test` to run jest on all
 
 
-# commit linting/checks
+## commit linting/checks
 * uses lint-stage on commit messages, fix: feat: show in change log
 * runs eslint on pre-commit
 
