@@ -6,7 +6,8 @@
     "scripts": {
         "start": "vite",
         "build": "vite build",
-        "eslint": "eslint --fix ./src/**/*.ts",
+        "eslint": "eslint ./src/**/*.ts",
+        "eslint:fix": "eslint --fix ./src/**/*.ts",
         "test": "jest"
     },
     "keywords": [],

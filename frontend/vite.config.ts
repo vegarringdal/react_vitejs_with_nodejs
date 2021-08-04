@@ -21,7 +21,7 @@ function number(x: string): number {
 
 const PORT_API = number(process.env.PORT_API) | 81;
 const PORT_WEB = number(process.env.PORT_WEB) | 80;
-const API_ROOT_PATH = process.env.API_ROOT_PATH || "/api";
+const SERVER_API_ROOT = process.env.SERVER_API_ROOT || "/api";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -30,7 +30,7 @@ export default defineConfig({
     server: {
         port: PORT_WEB,
         proxy: {
-            [API_ROOT_PATH]: {
+            [SERVER_API_ROOT]: {
                 target: `http://localhost:${PORT_API}`,
                 changeOrigin: true
             }

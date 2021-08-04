@@ -20,18 +20,26 @@ these:
 If you need to override this during development then you need to add '.env' root
 
 ```env
-# for backend
-SERVER_PORT         # default: 80;
-SESSION_MAX_AGE     # default: 864000000;
-HOST                # default: localhost;
-SESSION_DOMAIN      # default: localhost;
-SESSION_PRIVATE_KEY # default: my_key;
-SESSION_NAME        # default: session_name;
-API_ROOT_PATH       # default: /api;
+# BACKEND
 
-# for development only
-PORT_API:           # default : 81
-PORT_WEB:           # default : 80
+# http server
+SERVER_PORT         # default: 80;
+SERVER_HOST         # default: localhost;
+SERVER_COMPRESSION  # default: true
+SERVER_API_ROOT     # default: /api - vitejs also uses this for proxy settings
+
+# express session
+SESSION_MAX_AGE     # default: 864000000;
+SESSION_DOMAIN      # default: localhost;
+SESSION_PRIVATE_KEY # default: change_me;
+SESSION_NAME        # default: session_name;
+SESSION_HTTP_ONLY   # default: true;
+SESSION_SAME_SITE   # default: true;
+       
+
+# DEVELOPMENT ONLY
+PORT_API:           # default : 81 Will be used by backend when it just a api server and vitejs is serving pages
+PORT_WEB:           # default : 80 Will be used by vitejs dev server
 ```
 
 ## make builds & run
@@ -39,11 +47,18 @@ PORT_WEB:           # default : 80
 -   `npm run build` to build production
 -   `npm run serve` to run production
 
+Serve starts build on backend (dist folder, index.js), and uses frontend dist folder to serve www.
+
 ## testing
 
 -   `npm run prettier` to run prettier on all ts and json files
 -   `npm run eslint` to run eslint on all
 -   `npm run test` to run jest on all
+
+
+# commit linting/checks
+* uses lint-stage on commit messages, fix: feat: show in change log
+* runs eslint on pre-commit
 
 ### todo
 

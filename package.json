@@ -15,6 +15,10 @@
         "eslint:backend": "npm run eslint -w backend",
         "eslint:frontend": "npm run eslint -w frontend",
         "eslint:common": "npm run eslint -w common",
+        "eslint:fix": "npm run eslint:fix:frontend && npm run eslint:fix:backend && npm run eslint:fix:common",
+        "eslint:fix:backend": "npm run eslint:fix -w backend",
+        "eslint:fix:frontend": "npm run eslint:fix -w frontend",
+        "eslint:fix:common": "npm run eslint:fix -w common",
         "test": "npm run test:backend && npm run test:frontend && npm run test:common",
         "test:backend": "npm run test -w backend",
         "test:frontend": "npm run test -w frontend",
@@ -33,7 +37,7 @@
         "common",
         "frontend"
     ],
-    "dependencies": {
+    "devDependencies": {
         "@commitlint/cli": "^13.1.0",
         "@commitlint/config-conventional": "^13.1.0",
         "concurrently": "^6.2.0",

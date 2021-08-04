@@ -7,14 +7,17 @@ import * as zlib from "zlib";
 import {
     WEB_ROOT,
     SERVER_PORT,
-    HOST,
     SESSION_PRIVATE_KEY,
     SESSION_NAME,
     SESSION_DOMAIN,
     SESSION_MAX_AGE,
     IS_DEVELOPMENT,
     PORT_WEB,
-    PORT_API
+    PORT_API,
+    SESSION_HTTP_ONLY,
+    SESSION_SAME_SITE,
+    SERVER_HOST,
+    SERVER_COMPRESSION
 } from "./config";
 
 export const app = express();
@@ -42,9 +45,9 @@ export function initHttpConfig() {
             saveUninitialized: true,
             cookie: {
                 path: "/",
-                httpOnly: true,
+                httpOnly: SESSION_HTTP_ONLY,
                 signed: true,
-                sameSite: true,
+                sameSite: SESSION_SAME_SITE,
                 maxAge: SESSION_MAX_AGE,
                 domain: SESSION_DOMAIN,
                 secure: !IS_DEVELOPMENT // only used for production/https
@@ -55,12 +58,14 @@ export function initHttpConfig() {
     /**
      * Compression
      */
-    app.use(
-        compression({
-            threshold: 1,
-            flush: zlib.constants.Z_SYNC_FLUSH
-        })
-    );
+    if (SERVER_COMPRESSION) {
+        app.use(
+            compression({
+                threshold: 1,
+                flush: zlib.constants.Z_SYNC_FLUSH
+            })
+        );
+    }
 
     /**
      * body parser
@@ -76,14 +81,15 @@ export function initHttpConfig() {
 
 export function startHttpServer() {
     if (IS_DEVELOPMENT) {
-        app.listen(3001, HOST);
+        // when in delvelopment we are only a rest api server, so need to use PORT_API
+        app.listen(PORT_API, SERVER_HOST);
         console.log(`--------------------------------------------------------------\n`);
         console.log(` ---> Vitejs on http://localhost:${PORT_WEB}`);
         console.log(` ---> Backend using port: ${PORT_API} for API (vitejs proxy fixing this)`);
         console.log(` ---> Running in mode: ${IS_DEVELOPMENT ? "Development" : "Production"}`);
         console.log(`\n--------------------------------------------------------------\n`);
     } else {
-        app.listen(SERVER_PORT, HOST);
+        app.listen(SERVER_PORT, SERVER_HOST);
         console.log(`--------------------------------------------------------------\n`);
         console.log(` ---> Running on http://localhost:${SERVER_PORT}`);
         console.log(` ---> Serving pages from ${path.join(__dirname, "../", "frontend")}`);
