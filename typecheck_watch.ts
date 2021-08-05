@@ -20,7 +20,6 @@ backend.printSettings();
 backend.inspectAndPrint();
 backend.worker_watch("./");
 
-
 const common = TypeChecker({
     basePath: "./common/src",
     name: "checker_common",
@@ -30,4 +29,3 @@ const common = TypeChecker({
 common.printSettings();
 common.inspectAndPrint();
 common.worker_watch("./");
-

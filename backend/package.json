@@ -1,7 +1,6 @@
 {
     "name": "backend",
     "version": "1.0.0",
-
     "scripts": {
         "start": "ts-node --project ./tsconfig.json server_dev",
         "build": "ts-node --project ./tsconfig.json server_build",

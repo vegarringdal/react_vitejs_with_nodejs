@@ -22,6 +22,11 @@ export const DEFAULT_SESSION_SAME_SITE = true;
 export const DEFAULT_PORT_API = 1081;
 export const DEFAULT_PORT_WEB = 1080;
 
+/********************************************************************
+ * Next part is just helpers for env variables so we get correct type from strings
+ *
+ */
+
 /**
  * Helper for returning number or 0
  * @param x any
@@ -41,12 +46,24 @@ export function toNumber(x: string | null | undefined): number {
  * @param x any
  * @returns number
  */
-export function toBool(x: string | null | undefined): boolean {
+export function toBool(x: string | null | undefined, defaultValue: boolean): boolean {
     if (typeof x !== "string") {
-        return false;
+        return defaultValue || false;
     }
     if (x.toLowerCase() === "true") {
         return true;
     }
     return false;
+}
+
+/**
+ * Helper for returning array, splitter is comma
+ * @param x any
+ * @returns string[] | null
+ */
+export function toArray(x: string | null | undefined): string[] | null {
+    if (typeof x !== "string") {
+        return null;
+    }
+    return x.split(",");
 }

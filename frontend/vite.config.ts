@@ -1,12 +1,7 @@
 import { defineConfig } from "vite";
 import reactRefresh from "@vitejs/plugin-react-refresh";
 import { config } from "dotenv";
-import {
-    DEFAULT_PORT_API,
-    DEFAULT_PORT_WEB,
-    DEFAULT_SERVER_API_ROOT,
-    toNumber
-} from "../config_defaults";
+import { DEFAULT_PORT_API, DEFAULT_PORT_WEB, DEFAULT_SERVER_API_ROOT, toNumber } from "../config_defaults";
 
 // add env files - only environment variables starting with VITE_ gets included in client side
 config({ path: "../.env" });
