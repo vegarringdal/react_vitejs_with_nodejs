@@ -66,23 +66,47 @@ Serve starts build on backend (dist folder, index.js), and uses frontend dist fo
 -   uses lint-stage on commit messages, fix: feat: show in change log
 -   runs eslint on pre-commit
 
+## Frontend/backend libs
+
+Some of the libs added (nice to have for new projects)
+
+Frontend:
+
+-   render: react
+-   state: zustand
+-   router: react-router-dom
+-   css: tailwindcss
+-   testing: jest/eslint
+-   language: typescript
+
+Backend:
+
+-   language: typescript
+-   testing: jest/eslint
+-   database: oracledb
+-   http framework: expressjs
+-   express middleware: express-session
+-   express middleware: compression/zlib
+-   express middleware: rate-limiter-flexible
+-   express middleware: multer
+-   timer: node-cron
+
 ## First time usage:
 
 -   you should edit the package.json name & description
 -   add correct url to .versionrc.json
 -   update lisense and author
 
-
 ## Docker
-Ive added default docker file to help build.
-You need to replace tag and name.
 
-* Build to build:
-  * `docker build . -t awsome/webapp`  
-* Run sample 
-  * `docker run --name myAppv01 --env-file .env -p 81:1080 -d awsome/webapp`
-* Check its running: 
-  * `docker logs myAppv01`
+Ive added default docker file to help build. You need to replace tag and name.
+
+-   Build to build:
+    -   `docker build . -t awsome/webapp`
+-   Run sample
+    -   `docker run --name myAppv01 --env-file .env -p 81:1080 -d awsome/webapp`
+-   Check its running:
+    -   `docker logs myAppv01`
 
 ### todo
 
