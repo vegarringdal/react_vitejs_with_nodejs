@@ -26,6 +26,7 @@
         "prettier": "run-s -s -n prettier:*",
         "prettier:json": "prettier --write  \"./**/*.json\"",
         "prettier:ts": "prettier --write  \"./**/*.ts\"",
+        "prettier:js": "prettier --write  \"./**/*.js\"",
         "prettier:tsx": "prettier --write  \"./**/*.tsx\"",
         "typecheck": "ts-node ./typecheck.ts",
         "typecheck:watch": "ts-node ./typecheck_watch.ts",
