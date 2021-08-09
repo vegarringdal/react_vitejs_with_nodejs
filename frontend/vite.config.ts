@@ -7,8 +7,8 @@ import { DEFAULT_PORT_API, DEFAULT_PORT_WEB, DEFAULT_SERVER_API_ROOT, toNumber }
 config({ path: "../.env" });
 
 const ENV = process.env;
-const PORT_API = toNumber(ENV.PORT_API) | DEFAULT_PORT_API;
-const PORT_WEB = toNumber(ENV.PORT_WEB) | DEFAULT_PORT_WEB;
+const PORT_API = toNumber(ENV.PORT_API, DEFAULT_PORT_API);
+const PORT_WEB = toNumber(ENV.PORT_WEB, DEFAULT_PORT_WEB);
 const SERVER_API_ROOT = ENV.SERVER_API_ROOT || DEFAULT_SERVER_API_ROOT;
 
 // https://vitejs.dev/config/
