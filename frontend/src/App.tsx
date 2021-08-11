@@ -6,7 +6,10 @@ function App() {
     return (
         <div className="text-center text-lg md:text-4xl">
             <header className="App-header h-screen bg-gray-800 flex flex-col justify-center align-middle text-white">
-                <img src={logo} className="App-logo h-2/4" alt="logo" />
+                <div className="flex justify-center">
+                    <img src={logo} className="App-logo max-w-2xl" alt="logo" />
+                </div>
+
                 <p>
                     Edit <code>src/App.tsx</code> and save to reload.
                 </p>
