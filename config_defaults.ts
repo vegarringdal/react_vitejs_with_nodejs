@@ -5,6 +5,7 @@
  * Never add passwords to this file
  */
 
+
 // web nodejs server
 export const DEFAULT_SERVER_PORT: number = 1080;
 export const DEFAULT_SERVER_HOST: string = "0.0.0.0";
@@ -19,7 +20,7 @@ export const DEFAULT_SESSION_NAME: string = "session_name";
 export const DEFAULT_SESSION_HTTP_ONLY: boolean = true;
 export const DEFAULT_SESSION_SAME_SITE: boolean = true;
 
-// for develpment only
+// for develpment only PS! Vitejs does not restart when you edit these...
 export const DEFAULT_PORT_API: number = 1081;
 export const DEFAULT_PORT_WEB: number = 1080;
 
@@ -32,6 +33,10 @@ export const DEFAULT_PORT_WEB: number = 1080;
  * Helper for returning number or 0
  */
 export function toNumber(x: string | null | undefined, defaultValue: number): number {
+    if (typeof x !== "string") {
+        return defaultValue;
+    }
+    
     const number = parseInt(x);
     if (isNaN(number)) {
         return defaultValue;

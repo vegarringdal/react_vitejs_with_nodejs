@@ -4,3 +4,6 @@ describe("backend", () => {
         done();
     });
 });
+
+// just so it acts as a module
+export const x = 1;

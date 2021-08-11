@@ -1,4 +1,5 @@
 {
+    "extends": "../tsconfig.json",
     "compilerOptions": {
         "target": "es2017",
         "module": "commonjs",
@@ -6,6 +7,5 @@
         "isolatedModules": false,
         "esModuleInterop": true
     },
-
-    "exclude": ["node_modules", "dist"]
+    "files": ["../server_build.ts", "../server_dev.ts", "../../config_defaults.ts"]
 }

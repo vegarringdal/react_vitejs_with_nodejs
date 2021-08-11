@@ -1,4 +1,5 @@
 {
+    "extends": "../tsconfig.json",
     "compilerOptions": {
         "target": "ESNext",
         "lib": ["DOM", "DOM.Iterable", "ESNext"],
@@ -14,6 +15,5 @@
         "isolatedModules": true,
         "noEmit": true,
         "jsx": "react"
-    },
-    "include": ["src"]
+    }
 }
