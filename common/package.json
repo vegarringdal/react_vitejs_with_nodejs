@@ -8,13 +8,13 @@
     },
     "keywords": [],
     "devDependencies": {
-        "@types/jest": "^26.0.24",
-        "@typescript-eslint/eslint-plugin": "^4.28.4",
-        "@typescript-eslint/parser": "^4.28.4",
-        "ts-jest": "^27.0.4",
+        "@types/jest": "^27.0.1",
+        "@typescript-eslint/eslint-plugin": "^4.29.3",
+        "@typescript-eslint/parser": "^4.29.3",
+        "ts-jest": "^27.0.5",
         "jest": "^27.0.6",
-        "eslint": "^7.31.0",
+        "eslint": "^7.32.0",
         "eslint-config-prettier": "^8.3.0",
-        "eslint-plugin-prettier": "^3.4.0"
+        "eslint-plugin-prettier": "^3.4.1"
     }
 }

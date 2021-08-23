@@ -60,6 +60,18 @@ Serve starts build on backend (dist folder, index.js), and uses frontend dist fo
 -   `npm run test` to run jest on all
 -   `npm run typecheck` to run typescript check (throws on error)
 -   `npm run typecheck:watch` to run typescript check in watch mode
+-   `npm run ci` runs test , eslint without fix and typecheck. 
+
+### Pre commit runs:
+  -  `npm run eslint`
+  -  `npm run typecheck`
+
+
+### Github action runs:
+  -  `npm install -g npm`
+  -  `npm run build`
+  -  `npm run ci`
+
 
 ## commit linting/checks
 
@@ -111,4 +123,4 @@ Ive added default docker file to help build. You need to replace tag and name.
 ### todo
 
 -   look into component testing with react, or puppeteer
--   add github action for test, eslint check & typechecking
+
