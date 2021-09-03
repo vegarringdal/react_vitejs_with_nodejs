@@ -1,0 +1,45 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.177.0/containers/javascript-node
+{
+    "name": "Node.js",
+    "build": {
+        "dockerfile": "Dockerfile",
+        // Update 'VARIANT' to pick a Node version: 12, 14, 16
+        "args": { "VARIANT": "16" }
+    },
+
+    // Set *default* container specific settings.json values on container create.
+    "settings": {
+        "terminal.integrated.profiles.linux": {
+            "zsh (login)": {
+                "path": "zsh",
+                "args": ["-l"]
+            }
+        }
+    },
+
+    // Add the IDs of extensions you want installed when the container is created.
+    "extensions": [
+        "eamodio.gitlens",
+        "pflannery.vscode-versionlens",
+        "esbenp.prettier-vscode",
+        "bierner.lit-html",
+        "ms-azuretools.vscode-docker",
+        "github.vscode-pull-request-github",
+        "humao.rest-client",
+        "bradlc.vscode-tailwindcss",
+        "gruntfuggly.todo-tree",
+        "ms-vscode-remote.remote-containers",
+        "dbaeumer.vscode-eslint",
+        "msjsdiag.debugger-for-chrome"
+    ],
+
+    // Use 'forwardPorts' to make a list of ports inside the container available locally.
+    "forwardPorts": [1080],
+
+    // Use 'postCreateCommand' to run commands after the container is created.
+    "postCreateCommand": "npm install && npm start",
+
+    // Comment out connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+    "remoteUser": "node"
+}
