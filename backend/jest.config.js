@@ -4,7 +4,7 @@ module.exports = {
     collectCoverageFrom: [],
     globals: {
         "ts-jest": {
-            tsconfig: "tsconfig.json",
+            tsconfig: "<rootDir>/tsconfig.jest.json",
             diagnostics: false
         }
     }

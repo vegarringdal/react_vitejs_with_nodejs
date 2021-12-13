@@ -1,11 +1,13 @@
 {
     "extends": "../tsconfig.json",
     "compilerOptions": {
+        "rootDirs": ["./src", "../common/src"],
         "target": "es2017",
         "module": "commonjs",
         "moduleResolution": "node",
         "isolatedModules": false,
         "esModuleInterop": true
     },
-    "files": ["../server_build.ts", "../server_dev.ts", "../../config_defaults.ts"]
+    "files": ["../server_build.ts", "../server_dev.ts", "../../config_defaults.ts", "./index.ts"],
+    "exclude": ["node_modules", "dist"]
 }
