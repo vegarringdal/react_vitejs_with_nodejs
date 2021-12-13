@@ -8,11 +8,10 @@ import { TypeChecker } from "esbuild-helpers";
  *  -> these also check ts config files running backend and frontend
  */
 
-const frontend = TypeChecker({
-    basePath: "./frontend/src",
+ const frontend = TypeChecker({
+    basePath: "./frontend",
     name: "checker_frontend",
-    tsConfig: "../tsconfig.json",
-    shortenFilenames: false,
+    tsConfig: "./tsconfig.json",
     throwOnSemantic: true,
     throwOnSyntactic: true
 });
@@ -24,7 +23,6 @@ const backend = TypeChecker({
     basePath: "./backend/src",
     name: "checker_backend",
     tsConfig: "../tsconfig.json",
-    shortenFilenames: false,
     throwOnSemantic: true,
     throwOnSyntactic: true
 });
@@ -36,7 +34,6 @@ const common = TypeChecker({
     basePath: "./common/src",
     name: "checker_common",
     tsConfig: "../tsconfig.json",
-    shortenFilenames: false,
     throwOnSemantic: true,
     throwOnSyntactic: true
 });

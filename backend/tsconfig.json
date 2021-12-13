@@ -8,6 +8,6 @@
         "isolatedModules": false,
         "esModuleInterop": true
     },
-    "files": ["../server_build.ts", "../server_dev.ts", "../../config_defaults.ts", "./index.ts"],
+    "files": ["../server_build.ts", "../server_dev.ts", "../../config_defaults.ts"],
     "exclude": ["node_modules", "dist"]
 }

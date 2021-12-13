@@ -1,10 +1,10 @@
 import { TypeChecker } from "esbuild-helpers";
 
 const frontend = TypeChecker({
-    basePath: "./frontend/src",
+    basePath: "./frontend",
     name: "checker_frontend",
     shortenFilenames: false,
-    tsConfig: "../tsconfig.json"
+    tsConfig: "./tsconfig.json"
 });
 
 frontend.printSettings();

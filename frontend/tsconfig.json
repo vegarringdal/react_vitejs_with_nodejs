@@ -17,6 +17,6 @@
         "noEmit": true,
         "jsx": "react"
     },
-    "files": ["./vite-env.d.ts"],
+    "files": ["./src/vite-env.d.ts"],
     "exclude": ["node_modules"]
 }
