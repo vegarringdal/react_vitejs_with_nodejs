@@ -24,7 +24,7 @@ import {
     DEFAULT_SESSION_NAME,
     DEFAULT_SESSION_PRIVATE_KEY,
     DEFAULT_SESSION_SAME_SITE
-} from "../../config_defaults";
+} from "../../common/src/config_defaults";
 
 // global variable set by esbuild
 declare const DEVELOPMENT: boolean;

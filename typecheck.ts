@@ -20,9 +20,9 @@ frontend.printSettings();
 frontend.inspectAndPrint();
 
 const backend = TypeChecker({
-    basePath: "./backend/src",
+    basePath: "./backend",
     name: "checker_backend",
-    tsConfig: "../tsconfig.json",
+    tsConfig: "./tsconfig.json",
     throwOnSemantic: true,
     throwOnSyntactic: true
 });
@@ -31,9 +31,9 @@ backend.printSettings();
 backend.inspectAndPrint();
 
 const common = TypeChecker({
-    basePath: "./common/src",
+    basePath: "./common",
     name: "checker_common",
-    tsConfig: "../tsconfig.json",
+    tsConfig: "./tsconfig.json",
     throwOnSemantic: true,
     throwOnSyntactic: true
 });

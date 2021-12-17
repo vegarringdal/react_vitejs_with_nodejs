@@ -12,7 +12,7 @@ clearFolders("dist");
  */
 nodejs(
     {
-        watch: ["./src/**/*.ts", "../common/**/*.ts", "../config_defaults.ts", "../*.env"],
+        watch: ["./src/**/*.ts", "../common/**/*.ts", "../*.env"],
         launch: true,
         launchArg: { argsBefore: ["--inspect"] }
     },

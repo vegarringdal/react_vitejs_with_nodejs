@@ -12,21 +12,21 @@ frontend.inspectAndPrint();
 frontend.worker_watch(["./"]);
 
 const backend = TypeChecker({
-    basePath: "./backend/src",
+    basePath: "./backend",
     name: "checker_backend",
     shortenFilenames: false,
-    tsConfig: "../tsconfig.json"
+    tsConfig: "./tsconfig.json"
 });
 
 backend.printSettings();
 backend.inspectAndPrint();
-backend.worker_watch(["./", "../../config_defaults.ts"]);
+backend.worker_watch(["./"]);
 
 const common = TypeChecker({
-    basePath: "./common/src",
+    basePath: "./common",
     name: "checker_common",
     shortenFilenames: false,
-    tsConfig: "../tsconfig.json"
+    tsConfig: "./tsconfig.json"
 });
 
 common.printSettings();

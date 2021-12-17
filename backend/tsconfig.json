@@ -1,5 +1,4 @@
 {
-    "extends": "../tsconfig.json",
     "compilerOptions": {
         "rootDirs": ["./src", "../common/src"],
         "target": "es2017",
@@ -8,6 +7,5 @@
         "isolatedModules": false,
         "esModuleInterop": true
     },
-    "files": ["../server_build.ts", "../server_dev.ts", "../../config_defaults.ts"],
     "exclude": ["node_modules", "dist"]
 }

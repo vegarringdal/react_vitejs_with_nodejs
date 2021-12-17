@@ -5,7 +5,6 @@
  * Never add passwords to this file
  */
 
-
 // web nodejs server
 export const DEFAULT_SERVER_PORT: number = 1080;
 export const DEFAULT_SERVER_HOST: string = "0.0.0.0";
@@ -36,7 +35,7 @@ export function toNumber(x: string | null | undefined, defaultValue: number): nu
     if (typeof x !== "string") {
         return defaultValue;
     }
-    
+
     const number = parseInt(x);
     if (isNaN(number)) {
         return defaultValue;
