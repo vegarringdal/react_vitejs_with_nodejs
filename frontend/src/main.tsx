@@ -1,14 +1,11 @@
-import React from "react";
-import ReactDOM from "react-dom";
 import "./index.css";
-import App from "./App";
 import { commonCodeString } from "common/src/exports";
+import React from "react";
+import App from "./App";
+import { createRoot } from "react-dom/client";
 
-ReactDOM.render(
-    <React.StrictMode>
-        <App />
-    </React.StrictMode>,
-    document.getElementById("root")
-);
-
+const container = document.getElementById("root");
+// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+const root = createRoot(container!); // createRoot(container!) if you use TypeScript
+root.render(<App />);
 console.log(commonCodeString);
