@@ -30,9 +30,9 @@
         "prettier:tsx": "prettier --write  \"./**/*.tsx\"",
         "typecheck": "ts-node ./typecheck.ts",
         "typecheck:watch": "ts-node ./typecheck_watch.ts",
-        "release": "standard-version --release-as minor",
-        "release:test": "standard-version --dry-run",
-        "release:major": "standard-version --release-as major",
+        "release": "commit-and-tag-version --release-as minor",
+        "release:test": "commit-and-tag-version --dry-run",
+        "release:major": "commit-and-tag-version --release-as major",
         "prepare": "husky install",
         "ci": "run-s -s -n ci:*",
         "ci:test": "npm run test",
@@ -48,13 +48,13 @@
         "frontend"
     ],
     "devDependencies": {
-        "@commitlint/cli": "^16.2.4",
-        "@commitlint/config-conventional": "^16.2.4",
-        "husky": "^7.0.4",
-        "lint-staged": "^12.4.1",
+        "@commitlint/cli": "^17.0.3",
+        "@commitlint/config-conventional": "^17.0.3",
+        "husky": "^8.0.1",
+        "lint-staged": "^13.0.3",
         "npm-run-all": "^4.1.5",
-        "prettier": "^2.6.2",
-        "standard-version": "^9.3.2",
-        "ts-node": "^10.7.0"
+        "prettier": "^2.7.1",
+        "commit-and-tag-version": "^10.0.1",
+        "ts-node": "^10.9.1"
     }
 }

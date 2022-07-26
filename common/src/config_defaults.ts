@@ -9,6 +9,8 @@
 export const DEFAULT_SERVER_PORT: number = 1080;
 export const DEFAULT_SERVER_HOST: string = "0.0.0.0";
 export const DEFAULT_SERVER_COMPRESSION: boolean = true;
+
+// Vitejs does not restart when you edit this and you need to manually update in vite.config.ts
 export const DEFAULT_SERVER_API_ROOT: string = "/api";
 
 // for express session
@@ -19,7 +21,7 @@ export const DEFAULT_SESSION_NAME: string = "session_name";
 export const DEFAULT_SESSION_HTTP_ONLY: boolean = true;
 export const DEFAULT_SESSION_SAME_SITE: boolean = true;
 
-// for develpment only PS! Vitejs does not restart when you edit these...
+// for develpment only PS! Vitejs does not restart when you edit these and you need to manually update in vite.config.ts
 export const DEFAULT_PORT_API: number = 1081;
 export const DEFAULT_PORT_WEB: number = 1080;
 
