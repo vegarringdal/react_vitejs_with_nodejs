@@ -6,6 +6,13 @@ Trying out simple backend/frontend project template
 -   Using vitejs for very fast bundling for frontend
 -   Using homemade script/package with esbuild for backend and pretty typechecking
 
+
+### todo
+
+- look more into sample on e2e testing for UI - pupperteer ?
+- do we want react component testing... I never do ui unit test.. but usually have function/classes i want tests on
+
+
 ### Development & run
 
 -   `npm install` to install all dependencies
@@ -120,7 +127,4 @@ Ive added default docker file to help build. You need to replace tag and name.
 -   Check its running:
     -   `docker logs myAppv01`
 
-### todo
-
--   look into component testing with react, or puppeteer
 
